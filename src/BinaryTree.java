@@ -6,25 +6,41 @@ public class BinaryTree {
 	}
 	
 	void preOrderPrint(Node v) {
-		if (v == null) //condi��o de saida
+		if (v == null) //condição de saida
 			return;
 		
 		//raiz primeiro
-		System.out.println(v.getValue() + " ");
+		System.out.print(v.getValue() + " ");
 		//subarvore esquerda
 		preOrderPrint(v.getNodeLeft());		
 		//subarvore direita
 		preOrderPrint(v.getNodeRight());
 	}
 
-	void inOrderPrint() {
+	void inOrderPrint(Node v) {
+		if (v == null) //condição de saida
+			return;
 		
+		//subarvore esquerda
+		inOrderPrint(v.getNodeLeft());		
+		//raiz no meio
+		System.out.print(v.getValue() + " ");
+		//subarvore direita
+		inOrderPrint(v.getNodeRight());
 	}
 	
 	
 	
-	void postOrderPrint() {
+	void postOrderPrint(Node v) {
+		if (v == null) //condição de saida
+			return;
 		
+		//subarvore esquerda
+		postOrderPrint(v.getNodeLeft());		
+		//subarvore direita
+		postOrderPrint(v.getNodeRight());
+		//raiz por último 
+		System.out.print(v.getValue() + " ");
 	}
 	
 	
