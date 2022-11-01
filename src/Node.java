@@ -7,6 +7,19 @@ public class Node {
 		this.nodeLeft = nodeLeft;
 		this.nodeRight = nodeRight;
 	}
+	public boolean isExternal(){
+		if (nodeLeft == null && nodeRight == null )
+			return true;
+		return false;
+	}
+	
+	//grau do nós
+	public int length() {
+		if (isExternal()) return 0;
+		if (nodeLeft != null && nodeRight != null ) return 2;
+		return 1;
+	}
+	
 	public String getValue() {
 		return value;
 	}
