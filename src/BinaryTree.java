@@ -10,6 +10,41 @@ public class BinaryTree {
 		return root;
 	}
 
+	public boolean isStrictBinaryTree(Node v) {
+		if (v == null) //condição de saida, percorreu a arvore toda e não achou filho único
+			return true;
+		
+		//se achou filho único, ou seja, só um lado é null 
+		if ((v.getNodeLeft()== null && v.getNodeRight() != null) 
+			||
+			(v.getNodeLeft() != null && v.getNodeRight() == null)) {
+		    return false;
+		}
+		
+		
+		return isStrictBinaryTree(v.getNodeLeft()) &&
+			   isStrictBinaryTree(v.getNodeRight());
+	
+	}
+	
+	//we need a method to find the amount of nodes in the tree
+	public int findNodeAmount (Node tree) {
+	    if (tree == null) {
+	        return 0;
+	    } else {
+	        return (findNodeAmount(tree.getNodeRight()) + findNodeAmount(tree.getNodeLeft()) + 1);
+	    }
+	}
+
+	//we'll need a method to find the amount of depths in the tree
+	public int findDepth (Node tree) {
+	    if (tree == null) {
+	        return 0;
+	    } else {
+	        return Math.max(findDepth(tree.getNodeRight()), findDepth(tree.getNodeLeft())+1 );
+	    }
+	}
+	
 
 	void preOrderPrint(Node v) {
 		if (v == null) //condição de saida
@@ -48,6 +83,7 @@ public class BinaryTree {
 		//raiz por último 
 		System.out.print(v.getValue() + " ");
 	}
+	
 	
 	
 }
