@@ -5,6 +5,12 @@ public class BinaryTree {
 		this.root = root;
 	}
 	
+
+	public Node getRoot() {
+		return root;
+	}
+
+
 	void preOrderPrint(Node v) {
 		if (v == null) //condição de saida
 			return;
@@ -42,7 +48,6 @@ public class BinaryTree {
 		//raiz por último 
 		System.out.print(v.getValue() + " ");
 	}
-	
 	
 	
 }
