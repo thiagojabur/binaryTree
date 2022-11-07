@@ -40,9 +40,10 @@ public class BinaryTree {
 	public int findDepth (Node tree) {
 	    if (tree == null) {
 	        return 0;
-	    } else {
-	        return Math.max(findDepth(tree.getNodeRight()), findDepth(tree.getNodeLeft())+1 );
-	    }
+	    } else 
+	    	return Math.max(findDepth(tree.getNodeLeft()), 
+	    			findDepth(tree.getNodeRight()))+1;
+	    
 	}
 	
 
