@@ -11,7 +11,7 @@ public class Principal {
 		
 		
 		System.out.println("Raiz é externa: " +  raiz.isExternal());
-		System.out.println("D é externa: " + d.isExternal());
+		System.out.println("Nó D é externo: " + d.isExternal());
 		BinaryTree arvoreBinariaTeste = new BinaryTree(raiz);
 		
 		System.out.println("Grau da Raiz: " +  arvoreBinariaTeste.getRoot().length());

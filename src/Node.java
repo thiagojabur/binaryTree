@@ -7,6 +7,7 @@ public class Node {
 		this.nodeLeft = nodeLeft;
 		this.nodeRight = nodeRight;
 	}
+	
 	public boolean isExternal(){
 		if (nodeLeft == null && nodeRight == null )
 			return true;
