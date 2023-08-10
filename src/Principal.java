@@ -9,7 +9,6 @@ public class Principal {
 		Node c = new Node("C", new Node("F", null, null),new Node("G",h , null));
 		Node raiz = new Node("A", b, c);
 		
-		
 		System.out.println("Raiz é externa: " +  raiz.isExternal());
 		System.out.println("Nó D é externo: " + d.isExternal());
 		BinaryTree arvoreBinariaTeste = new BinaryTree(raiz);
