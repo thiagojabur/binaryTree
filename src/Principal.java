@@ -1,7 +1,7 @@
 
 public class Principal {
 	public static void main(String[] args) {
-		
+		//código de árvore 
 		Node d = new Node("D", null, new Node("T", null,null));
 		Node e = new Node("E", null, null);
 		Node h = new Node("H", null,null);
