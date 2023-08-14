@@ -1,12 +1,14 @@
 
 public class Principal {
 	public static void main(String[] args) {
-		//código de árvore 
+		//código de árvore editado
 		Node d = new Node("D", null, new Node("T", null,null));
 		Node e = new Node("E", null, null);
 		Node h = new Node("H", null,null);
+		
 		Node b = new Node("B", d, e);
 		Node c = new Node("C", new Node("F", null, null),new Node("G",h , null));
+		Node g = new Node("G", d, e);
 		Node raiz = new Node("A", b, c);
 		
 		System.out.println("Raiz é externa: " +  raiz.isExternal());
